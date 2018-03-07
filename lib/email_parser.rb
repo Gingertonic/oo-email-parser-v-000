@@ -12,6 +12,6 @@ class EmailParser
 
   def parse
     to_add = @emails.split(/(, |\s)/)
-    to_add.select(/\b\w+@\w+\.com/)
+    to_add.select{|i| /\b\w+@\w+\.com/ }
   end
 end
