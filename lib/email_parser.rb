@@ -4,9 +4,9 @@
 # or whitespace (' ').
 
 class EmailParser
-  def self.parse(unformatted_addresses)
-    to_add = []
-    to_add << unformatted_addresses.split(/(, | )/)
-    to_add.each {|address| address = self.new}
+  attr_accessor :emails
+  
+  def initialize(emails)
+    @emails = emails
   end
 end
