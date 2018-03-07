@@ -5,7 +5,7 @@
 
 class EmailParser
   attr_accessor :emails
-  
+
   def initialize(emails)
     @emails = emails
   end
@@ -14,6 +14,5 @@ class EmailParser
     to_add = []
     to_add << @emails.split(/( - | )/)
     to_add.uniq!
-    to_add
   end
 end
