@@ -9,4 +9,11 @@ class EmailParser
   def initialize(emails)
     @emails = emails
   end
+
+  def parse
+    to_add = []
+    to_add << @emails.split(/( - | )/)
+    to_add.uniq!
+    to_add
+  end
 end
