@@ -11,6 +11,6 @@ class EmailParser
   end
 
   def parse
-    @emails.select(/\b\w+@\w+\.com/)  
+    @emails.select(/\b\w+@\w+\.com/)
   end
 end
