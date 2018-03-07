@@ -12,7 +12,7 @@ class EmailParser
 
   def parse
     to_add = []
-    to_add << @emails.split(/( - | )/)
+    to_add << @emails.split(/\b\w+@\w+\.com/)
     to_add.uniq
   end
 end
